@@ -1,5 +1,4 @@
 #include "Fixed.hpp"
-#include <cmath>
 
 Fixed::Fixed() : value(0) {
 	std::cout << "Default constructor called" << std::endl;
@@ -7,7 +6,7 @@ Fixed::Fixed() : value(0) {
 
 Fixed::Fixed(int iInt) : value(iInt << bits) {}
 
-Fixed::Fixed(float fFloat) : value(roundf(fFloat * ( 1 << bits)) ) {}
+Fixed::Fixed(float fFloat) : value(static_cast<int>(fFloat) << bits) {}
 
 Fixed::Fixed(const Fixed &other){
 	std::cout << "Copy constructor called" << std::endl;
@@ -35,7 +34,7 @@ void Fixed::setRawBits(int const raw){
 }
 
 float Fixed::toFloat(void) const {
-	return ((float)value / (float)(1 << bits));
+	return static_cast<float>(value / (1 << bits));
 }
 
 int Fixed::toInt(void) const {
