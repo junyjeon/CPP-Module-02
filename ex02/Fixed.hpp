@@ -18,27 +18,29 @@ public:
 	float toFloat(void) const;
 	int toInt(void) const;
 
-	Fixed &operator=(const Fixed &other);
+	Fixed& operator=(const Fixed &other);
 
-	Fixed &operator>(const Fixed &other);
-	Fixed &operator<(const Fixed &other);
-	Fixed &operator>=(const Fixed &other);
-	Fixed &operator<=(const Fixed &other);
-	Fixed &operator==(const Fixed &other);
-	Fixed &operator!=(const Fixed &other);
+	bool operator>(const Fixed &other) const;
+	bool operator<(const Fixed &other) const;
+	bool operator>=(const Fixed &other) const;
+	bool operator<=(const Fixed &other) const;
+	bool operator==(const Fixed &other) const;
+	bool operator!=(const Fixed &other) const;
 
-	Fixed &operator+(const Fixed &other);
-	Fixed &operator-(const Fixed &other);
-	Fixed &operator*(const Fixed &other);
-	Fixed &operator/(const Fixed &other);
+	Fixed operator+(const Fixed &other) const;
+	Fixed operator-(const Fixed &other) const;
+	Fixed operator*(const Fixed &other) const;
+	Fixed operator/(const Fixed &other) const;
 
-	Fixed &operator++(void);
-	Fixed operator++(int);
-	Fixed &operator++(void);
-	Fixed operator++(int);
+	Fixed &operator++(void);// pre
+	Fixed &operator--(void);
+	Fixed operator++(int);// post
+	Fixed operator--(int);
 
-	Fixed min();
-	Fixed max();
+	Fixed min(const Fixed &, const Fixed &);
+	Fixed min(const int, const int;
+	Fixed max(const Fixed &, const Fixed &);
+	Fixed max(const int, const int);
 
 
 };
