@@ -33,16 +33,15 @@ public:
 	Fixed operator/(const Fixed &other) const;
 
 	Fixed &operator++(void);// pre
-	Fixed &operator--(void);
 	Fixed operator++(int);// post
+
+	Fixed &operator--(void);
 	Fixed operator--(int);
 
 	Fixed min(const Fixed &, const Fixed &);
-	Fixed min(const int, const int;
+	Fixed min(const int, const int);
 	Fixed max(const Fixed &, const Fixed &);
 	Fixed max(const int, const int);
-
-
 };
 /*
 	1 000 0000

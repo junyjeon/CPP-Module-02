@@ -100,28 +100,31 @@ Fixed &Fixed::operator--(void) {
 }
 
 Fixed Fixed::operator++(int iInt) {
-	Fixed tmp;
-	tmp = iInt;
-	value++;
+	Fixed tmp = *this;
+	++*this;
 	return (tmp);
 }
 
 Fixed Fixed::operator--(int iInt) {
-	Fixed tmp;
-	tmp = iInt;
-	value--;
+	Fixed tmp = *this;
+	--*this;
 	return (tmp);
 }
 
-Fixed Fixed::min(Fixed &other, Fixed &other2) {
-	Fixed tmp;
-	tmp = other;
-
-	return (tmp);
+Fixed Fixed::min(const Fixed &left, const Fixed &right) {
+	return (left.toFloat() < right.toFloat() ? left : right);
 }
 
-Fixed Fixed::min(const int, const int) {
-	
+Fixed Fixed::min(const int left, const int right) {
+	return (left < right ? left : right);
+}
+
+Fixed Fixed::max(const Fixed &left, const Fixed &right) {
+	return (left.toFloat() < right.toFloat() ? right : left);
+}
+
+Fixed Fixed::max(const int left, const int right) {
+	return (left < right ? right : left);
 }
 
 std::ostream& operator<<(std::ostream& os, const Fixed &other) {
@@ -132,4 +135,5 @@ std::ostream& operator<<(std::ostream& os, const Fixed &other) {
 // int a, b, c;
 
 // c = a.operator+(b);
+// 증감 연산자 안먹음
 // float선언 이상함

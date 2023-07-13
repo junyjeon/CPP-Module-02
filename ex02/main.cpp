@@ -31,10 +31,10 @@ int main(void)
 	// c = a == b;
 	// std::cout << c << std::endl;
 
-	// std::cout << std::endl;
-	// std::cout << '+' << std::endl;
-	// c = a + b;
-	// std::cout << c << std::endl;
+	std::cout << std::endl;
+	std::cout << '+' << std::endl;
+	c = a + b;
+	std::cout << c << std::endl;
 
 	// std::cout << std::endl;
 	// std::cout << '-' << std::endl;
