@@ -35,6 +35,9 @@ int Fixed::toInt(void) const {
 	return value >> bits;
 }
 
+
+
+
 Fixed &Fixed::operator=(const Fixed &other){
 	std::cout << "Copy assignment operator called" << std::endl;
 	value = other.getRawBits();
@@ -65,6 +68,9 @@ bool Fixed::operator!=(const Fixed &other) const {
 	return value != other.value ? true : false;
 }
 
+
+
+
 Fixed Fixed::operator+(const Fixed &other) const {
 	Fixed tmp;
 	tmp.value = value + other.value;
@@ -85,9 +91,17 @@ Fixed Fixed::operator*(const Fixed &other) const {
 
 Fixed Fixed::operator/(const Fixed &other) const {
 	Fixed tmp;
+	if ( == 0)
+	{
+		std::cout << // 에러
+		return tmp;
+	}
 	tmp.value = (this->toInt() / other.toInt()) * (1 << bits);
 	return tmp;
 }
+
+
+
 
 Fixed &Fixed::operator++(void) {
 	value++;
@@ -100,7 +114,7 @@ Fixed &Fixed::operator--(void) {
 }
 
 Fixed Fixed::operator++(int iInt) {
-	Fixed tmp = *this;
+	Fixed tmp(*this);
 	++*this;
 	return (tmp);
 }
@@ -111,20 +125,23 @@ Fixed Fixed::operator--(int iInt) {
 	return (tmp);
 }
 
-Fixed Fixed::min(const Fixed &left, const Fixed &right) {
-	return (left.toFloat() < right.toFloat() ? left : right);
+
+
+
+Fixed Fixed::min(const Fixed &a, const Fixed &b) {
+	return (a < b ? a : b);
 }
 
-Fixed Fixed::min(const int left, const int right) {
-	return (left < right ? left : right);
+Fixed Fixed::min(const int a, const int b) {
+	return (a < b ? a : b);
 }
 
-Fixed Fixed::max(const Fixed &left, const Fixed &right) {
-	return (left.toFloat() < right.toFloat() ? right : left);
+Fixed Fixed::max(const Fixed &a, const Fixed &b) {
+	return (a < b ? b : a);
 }
 
-Fixed Fixed::max(const int left, const int right) {
-	return (left < right ? right : left);
+Fixed Fixed::max(const int a, const int b) {
+	return (a < b ? b : a);
 }
 
 std::ostream& operator<<(std::ostream& os, const Fixed &other) {

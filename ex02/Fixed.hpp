@@ -18,7 +18,6 @@ public:
 	float toFloat(void) const;
 	int toInt(void) const;
 
-	Fixed& operator=(const Fixed &other);
 
 	bool operator>(const Fixed &other) const;
 	bool operator<(const Fixed &other) const;
@@ -27,15 +26,16 @@ public:
 	bool operator==(const Fixed &other) const;
 	bool operator!=(const Fixed &other) const;
 
+	Fixed& operator=(const Fixed &other);
 	Fixed operator+(const Fixed &other) const;
 	Fixed operator-(const Fixed &other) const;
 	Fixed operator*(const Fixed &other) const;
 	Fixed operator/(const Fixed &other) const;
 
 	Fixed &operator++(void);// pre
-	Fixed operator++(int);// post
-
 	Fixed &operator--(void);
+
+	Fixed operator++(int);// post
 	Fixed operator--(int);
 
 	Fixed min(const Fixed &, const Fixed &);
