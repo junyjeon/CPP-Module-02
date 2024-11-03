@@ -36,24 +36,6 @@
 ### 🗣️ 개요
 C++의 Ad-hoc polymorphism, operator overloading, Orthodox Canonical class form을 학습하는 세 번째 C++ 모듈입니다.
 
-### 요구사항
-• 컴파일러
-  - c++ (clang++)
-  - -Wall -Wextra -Werror
-  - -std=c++98
-
-• 금지 사항
-  - STL 사용 금지
-  - <string.h> 대신 <string> 사용
-  - printf 대신 cout 사용
-  - 전역 변수 사용 금지
-
-• 준수 사항
-  - Orthodox Canonical Form 필수
-  - 모든 클래스 헤더 파일 필요
-  - 모든 멤버 함수 구현 필요
-
-### 구현 필수
 #### Orthodox Canonical Form
 - 기본 생성자
 - 복사 생성자
@@ -70,6 +52,23 @@ C++의 Ad-hoc polymorphism, operator overloading, Orthodox Canonical class form�
 - 고정 소수점 표현
 - 정수부와 소수부 관리
 - 형변환
+
+### 요구사항
+• 컴파일러
+  - c++ (clang++)
+  - -Wall -Wextra -Werror
+  - -std=c++98
+
+• 금지 사항
+  - STL 사용 금지
+  - <string.h> 대신 <string> 사용
+  - printf 대신 cout 사용
+  - 전역 변수 사용 금지
+
+• 준수 사항
+  - Orthodox Canonical Form 필수
+  - 모든 클래스 헤더 파일 필요
+  - 모든 멤버 함수 구현 필요
 
 ### 구현
 
