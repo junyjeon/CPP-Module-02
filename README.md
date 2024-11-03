@@ -1,10 +1,20 @@
-# CPP Module 02
-
 <div align="center">
+  <h1>💻 CPP Module 02</h1>
+  <p>Ad-hoc 다형성 | 연산자 오버로딩과 정규 형식</p>
+
   <img src="assets/14_cpp_module_02_review.jpg" alt="CPP Module 02 Review" width="800"/>
   
-  [![42 Score](https://img.shields.io/badge/Score-100%2F100-success?style=for-the-badge&logo=42)](https://github.com/junyjeon/CPP-Module-02)
-  [![C++](https://img.shields.io/badge/C++-98-blue.svg?style=for-the-badge&logo=c%2B%2B)](https://github.com/junyjeon/CPP-Module-02)
+  <div>
+    <img src="https://img.shields.io/badge/Score-100%2F100-success?style=flat-square&logo=42" alt="42 Score"/>
+    <img src="https://img.shields.io/badge/Language-C++98-00599C?style=flat-square&logo=c%2B%2B" alt="Language"/>
+  </div>
+
+  ### 학습 내용
+  - 연산자 오버로딩 구현
+  - 고정소수점 클래스 설계
+  - Orthodox Canonical Form
+  - 복사 생성자와 할당 연산자
+  - 산술 연산자 구현
 </div>
 
 ## 목차
@@ -26,30 +36,6 @@
 ### 🗣️ 개요
 C++의 Ad-hoc polymorphism, operator overloading, Orthodox Canonical class form을 학습하는 세 번째 C++ 모듈입니다.
 
-• 학습 목표
-  - Orthodox Canonical Form 이해와 구현
-  - 연산자 오버로딩의 개념과 활용
-  - 고정 소수점 수의 구현
-  - Ad-hoc 다형성의 이해
-
-• 주요 개념
-  - Orthodox Canonical Form
-    - 기본 생성자
-    - 복사 생성자
-    - 대입 연산자 오버로딩
-    - 소멸자
-  
-  - Operator Overloading
-    - 산술 연산자
-    - 비교 연산자
-    - 증감 연산자
-    - 입출력 연산자
-  
-  - Fixed Point Numbers
-    - 고정 소수점 표현
-    - 정수부와 소수부 관리
-    - 형변환
-
 ### 요구사항
 • 컴파일러
   - c++ (clang++)
@@ -66,6 +52,24 @@ C++의 Ad-hoc polymorphism, operator overloading, Orthodox Canonical class form�
   - Orthodox Canonical Form 필수
   - 모든 클래스 헤더 파일 필요
   - 모든 멤버 함수 구현 필요
+
+### 구현 필수
+#### Orthodox Canonical Form
+- 기본 생성자
+- 복사 생성자
+- 대입 연산자 오버로딩
+- 소멸자
+  
+#### Operator Overloading
+- 산술 연산자
+- 비교 연산자
+- 증감 연산자
+- 입출력 연산자
+  
+#### Fixed Point Numbers
+- 고정 소수점 표현
+- 정수부와 소수부 관리
+- 형변환
 
 ### 구현
 
