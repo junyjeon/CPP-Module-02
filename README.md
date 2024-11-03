@@ -3,26 +3,27 @@
 <div align="center">
   <img src="assets/14_cpp_module_02_review.jpg" alt="CPP Module 02 Review" width="800"/>
   
-  [![42 Score](https://img.shields.io/badge/Score-100%2F100-success?style=for-the-badge&logo=42)](https://github.com/your-username/CPP-Module-02)
+  [![42 Score](https://img.shields.io/badge/Score-100%2F100-success?style=for-the-badge&logo=42)](https://github.com/junyjeon/CPP-Module-02)
+  [![C++](https://img.shields.io/badge/C++-98-blue.svg?style=for-the-badge&logo=c%2B%2B)](https://github.com/junyjeon/CPP-Module-02)
 </div>
 
-## Table of Contents
-- [About](#about)
-- [Requirements](#requirements)
-- [Implementation](#implementation)
+## 목차
+- [개요](#개요)
+- [요구사항](#요구사항)
+- [구현](#구현)
   - [ex00: My First Orthodox Class](#ex00-my-first-orthodox-class)
   - [ex01: Towards a more useful fixed-point number class](#ex01-towards-a-more-useful-fixed-point-number-class)
   - [ex02: Now we're talking](#ex02-now-were-talking)
   - [ex03: BSP](#ex03-bsp)
-- [Usage](#usage)
-- [Testing & Debug](#testing--debug)
-- [Additional Information](#additional-information)
+- [사용법](#사용법)
+- [테스트 & 디버그](#테스트--디버그)
+- [추가 정보](#추가-정보)
   - [Orthodox Canonical Form](#orthodox-canonical-form)
   - [Operator Overloading](#operator-overloading)
-  - [Fixed Point Numbers](#fixed-point-numbers)
-- [Reference](#reference)
+  - [고정 소수점 수](#고정-소수점-수)
+- [참고 자료](#참고-자료)
 
-### 🗣️ About
+### 🗣️ 개요
 C++의 Ad-hoc polymorphism, operator overloading, Orthodox Canonical class form을 학습하는 세 번째 C++ 모듈입니다.
 
 • 학습 목표
@@ -49,7 +50,7 @@ C++의 Ad-hoc polymorphism, operator overloading, Orthodox Canonical class form�
     - 정수부와 소수부 관리
     - 형변환
 
-### Requirements
+### 요구사항
 • 컴파일러
   - c++ (clang++)
   - -Wall -Wextra -Werror
@@ -66,7 +67,7 @@ C++의 Ad-hoc polymorphism, operator overloading, Orthodox Canonical class form�
   - 모든 클래스 헤더 파일 필요
   - 모든 멤버 함수 구현 필요
 
-### Implementation
+### 구현
 
 #### ex00: My First Orthodox Class
 • 요구사항
@@ -450,12 +451,6 @@ bool bsp(Point const a, Point const b, Point const c, Point const point) {
 }
 ```
 
-• 학습 포인트
-  - const 멤버 변수의 활용
-  - 기하학적 알고리즘 구현
-  - Fixed 클래스의 실제 응용
-  - 복사 생성자와 대입 연산자의 const 처리
-
 • 삼각형 내부 점 판별 원리
 ```text
 1. 전체 삼각형 ABC의 면적 계산
@@ -467,7 +462,13 @@ bool bsp(Point const a, Point const b, Point const c, Point const point) {
    - P가 외부에 있으면: Area(ABC) < Area(PAB) + Area(PBC) + Area(PCA)
 ```
 
-### Testing & Debug
+• 학습 포인트
+  - const 멤버 변수의 활용
+  - 기하학적 알고리즘 구현
+  - Fixed 클래스의 실제 응용
+  - 복사 생성자와 대입 연산자의 const 처리
+
+### 테스트 & 디버그
 
 • 컴파일 및 기본 테스트
 ```bash
@@ -612,7 +613,7 @@ Orthodox& Orthodox::operator=(const Orthodox& rhs) {
 }
 ```
 
-#### Fixed Point Numbers
+#### 고정 소수점 수
 • 구조와 원리
 ```text
 32비트 정수 표현:
@@ -645,7 +646,7 @@ int fixed = 10860;
 float f = fixed / 256.0f;     // 10860 / 256 = 42.421875
 ```
 
-#### Operator Overloading
+#### 연산자 오버로딩
 • 연산자 종류와 특징
 ```cpp
 // 1. 단항 연산자
@@ -680,15 +681,11 @@ friend std::ostream& operator<<(std::ostream& out, const T& obj);
 // 클래스 내부 접근 가능
 ```
 
-### Reference
+### 참고 자료
 > Orthodox Canonical Form, 연산자 오버로딩, 고정소수점에 대한 심화 자료
 
-• Orthodox Canonical Form
+• 정형화된 클래스 형식(Orthodox Canonical Form)
   - [C++ Orthodox Canonical Class Form](https://www.francescmm.com/orthodox-canonical-class-form/)
-    - 정의와 필요성
-    - 구현 패턴
-    - 모범 사례
-  
   - [Rule of Three](https://en.cppreference.com/w/cpp/language/rule_of_three)
     - 복사 생성자
     - 대입 연산자
@@ -697,50 +694,27 @@ friend std::ostream& operator<<(std::ostream& out, const T& obj);
 • Operator Overloading
   - [Operator Overloading in C++](https://en.cppreference.com/w/cpp/language/operators)
     - 연산자 종류
-    - 구현 규칙
-    - 제약사항
   
   - [Microsoft: Operator Overloading](https://learn.microsoft.com/cpp/cpp/operator-overloading)
     - 구현 가이드라인
-    - 최적화 팁
-    - 실제 예제
 
-• Fixed Point Arithmetic
+• 고정 소수점 산술(Fixed Point Arithmetic)
   - [Fixed Point Arithmetic](https://en.wikipedia.org/wiki/Fixed-point_arithmetic)
     - 개념 설명
-    - 구현 방법
-    - 장단점
   
   - [Fixed Point Math in C](https://spin.atomicobject.com/2012/03/15/simple-fixed-point-math/)
     - 비트 연산
-    - 오버플로우 처리
-    - 최적화 기법
 
-• Binary Space Partitioning
+• 이진 공간 분할(Binary Space Partitioning, BSP)
   - [Point in Triangle Test](https://blackpawn.com/texts/pointinpoly/)
     - 알고리즘 설명
-    - 구현 방법
-    - 최적화
   
   - [Geometric Algorithms](https://www.cs.princeton.edu/~rs/AlgsDS07/16Geometric.pdf)
     - 기하학적 알고리즘
-    - 면적 계산
-    - 점 위치 판별
 
-• 추천 도서
-  - "Effective C++" by Scott Meyers
-    - Item 5: Know what functions C++ silently writes and calls
-    - Item 12: Copy all parts of an object
-  
-  - "C++ Coding Standards" by Herb Sutter
-    - Item 50: Learn the canonical forms
-    - Item 51: Operator overloading guidelines
-
-• 유용한 도구
+• 도구
   - [Fixed Point Calculator](https://www.rfwireless-world.com/calculators/floating-point-to-fixed-point-converter.html)
     - 고정소수점 변환
-    - 정밀도 계산
   
   - [C++ Shell](http://cpp.sh/)
     - 온라인 컴파일러
-    - 코드 테스트
